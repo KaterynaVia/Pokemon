@@ -1,0 +1,43 @@
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* This will create as many columns as can fit in the container, with each column being at least 200px wide */
+  grid-gap: 20px; /* This is the space between the grid items */
+  padding: 20px;
+  background: #575050;
+  border: 1px solid #575050;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s; /* Adds a smooth animation effect on hover */
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px); /* Slightly raise the card on hover for effect */
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px; /* Adds spacing between the image and the text */
+}
+
+.pokemon-card h3 {
+  margin: 5px 0; /* Adds spacing above and below the name */
+}
+
+.pokemon-card p {
+  margin: 0; /* Removes default paragraph margin */
+}
