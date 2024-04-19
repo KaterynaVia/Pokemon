@@ -1,6 +1,5 @@
-// PokemonDetails.jsx
 import React, { Component } from 'react';
-import './PokemonDetails.css'; // Ensure you have a corresponding CSS file for styles
+import './PokemonDetails.css'; 
 
 class PokemonDetails extends Component {
   render() {
@@ -19,7 +18,7 @@ class PokemonDetails extends Component {
             <h3>Abilities:</h3>
             <ul>
               {pokemon.abilities.map((ability, index) => (
-                <li key={index}>{ability.ability.name}</li> // Assuming each ability has an 'ability' object with a 'name' property
+                <li key={index}>{ability.ability.name}</li> 
               ))}
             </ul>
           </div>
@@ -27,11 +26,11 @@ class PokemonDetails extends Component {
             <h3>Stats:</h3>
             <ul>
               {pokemon.stats.map((stat, index) => (
-                <li key={index}>{stat.stat.name}: {stat.base_stat}</li> // Assuming each stat has a 'stat' object with a 'name' and a 'base_stat' property
+                <li key={index}>{stat.stat.name}: {stat.base_stat}</li> 
               ))}
             </ul>
           </div>
-          {/* Include any other details you want to show */}
+          {/* for extra details  */}
         </div>
       </div>
     );

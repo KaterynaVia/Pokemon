@@ -1,47 +1,29 @@
-/*.pokemon-modal {
-    position: relative;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  */
+
   .pokemon-modal {
-    position: fixed; /* Stay in place */
+    position: fixed; 
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset the modal to truly center it */
-    z-index: 100; /* Make sure it's on top of other elements */
+    z-index: 100; 
   }
   
   .pokemon-modal-content {
-    background-color: #fff;
+    background-color: #8aefd5;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
-  }
-  /*
-  .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;;
-  }
-  */
-  .close-button {
-    position: absolute;
-    top: 1rem; /* or your chosen value */
-    right: 1rem; /* or your chosen value */
-    z-index: 101; /* higher than the modal's z-index */
-    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(125, 135, 201, 0.1);
+    width: 100%;
+    max-width: 700px;
   }
   
-  /* Add more styling for the content as needed */
+  .close-button {
+    position: absolute;
+    top: 1rem; 
+    right: 0rem; 
+    z-index: 101; 
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+ 
+ 
   

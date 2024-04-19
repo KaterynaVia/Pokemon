@@ -4,9 +4,10 @@ import { Link, Outlet } from 'react-router-dom';
 function Root() {
   return (
     <>
+    
     <nav>
-      <Link to="/">Home</Link >
-      <Link to="/about">About</Link>
+      <Link to="/" className="nav-link">Home</Link>
+      <Link to="/about" className="nav-link">About</Link>
     </nav>
     <Outlet />
     </>

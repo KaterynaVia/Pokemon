@@ -2,10 +2,9 @@
 .pokemon-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* This will create as many columns as can fit in the container, with each column being at least 200px wide */
-  grid-gap: 20px; /* This is the space between the grid items */
+  grid-gap: 20px; 
   padding: 20px;
-  background: #575050;
+  background: #719fd1;
   border: 1px solid #575050;
 }
 
@@ -17,7 +16,7 @@
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
-  background-color: white;
+  background-color: rgb(243, 249, 249);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -26,6 +25,7 @@
 
 .pokemon-card:hover {
   transform: translateY(-5px); /* Slightly raise the card on hover for effect */
+  background-color: rgb(223, 234, 103);
 }
 
 .pokemon-card img {
@@ -35,9 +35,29 @@
 }
 
 .pokemon-card h3 {
-  margin: 5px 0; /* Adds spacing above and below the name */
+  margin: 5px 0; 
+  background-color: rgb(102, 186, 95);
 }
 
 .pokemon-card p {
-  margin: 0; /* Removes default paragraph margin */
+  margin: 0; 
+}
+.nav-link {
+  margin-right: 25px; /* Adjust the value to increase or decrease the space */
+  font-weight: bold; 
+  font-size: 1.5em; /* Increases the size of the text */
+}
+.nav-link:first-of-type {
+  margin-right: 25px;
+}
+.nav-button {
+  font-weight: bold; 
+  font-size: 1.2em; 
+  margin-right: 10px; /* Adds space to the right of each button */
+  background-color: rgb(130, 140, 219);
+}
+
+/* Remove the margin for the last button if they are next to each other */
+.nav-button.next {
+  margin-right: 0;
 }

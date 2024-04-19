@@ -4,7 +4,7 @@ const AboutPokemon = () => {
   return (
     <div>
       {/* Content of AboutPokemon */}
-      <h1>About Pokemon</h1>
+      <h1>I know nothing about Pokémon before this assignment</h1>
     </div>
   );
 };

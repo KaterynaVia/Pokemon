@@ -1,17 +1,11 @@
-
-
-//export default FrontPage;
 import React, { useState } from 'react';
 import PokemonList from '../components/PokemonList';
 import PokemonDetails from '../components/PokemonDetails';
-//import PokemonCard from '../components/PokemonCard';
-
 
 function FrontPage() {
-  // State to manage whether the modal is open
   const [showModal, setShowModal] = useState(false);
-  // State to manage the currently selected Pokemon
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0); // Add this line for pagination
 
   // Function to open the modal with the selected Pokemon's details
   const openModal = (pokemon) => {
@@ -25,33 +19,29 @@ function FrontPage() {
     setSelectedPokemon(null);
   };
 
+  // Function to handle pagination
+  const goToNextPage = () => {
+    setCurrentPage((prev) => prev + 1);
+  };
+
+  const goToPreviousPage = () => {
+    setCurrentPage((prev) => (prev > 0 ? prev - 1 : 0)); // Prevent going below page 0
+  };
+
   return (
     <>
       <h1>Welcome to the Pokédex!</h1>
-      <PokemonList onPokemonSelect={openModal} />
+      <button className="nav-button previous" onClick={goToPreviousPage} disabled={currentPage === 0}>Previous</button>
+      <button className="nav-button next" onClick={goToNextPage}>Next</button>
+      <PokemonList onPokemonSelect={openModal} page={currentPage} />
       {showModal && selectedPokemon && (
         <PokemonDetails
           pokemon={selectedPokemon}
           onClose={closeModal}
         />
-       
       )}
     </>
   );
 }
 
 export default FrontPage;
-//import React from 'react';
-//import PokemonList from '../components/PokemonList';
-//import PokemonDetails from '../components/PokemonDetails';
-
-//function FrontPage() {
-  //return (
-  //<>
-  //<h1>Welcome to the Pokédex!</h1>
-  //<PokemonList />
-  //<PokemonDetails />
-//</>
-//);
-   
-//}
