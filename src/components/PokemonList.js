@@ -33,7 +33,7 @@ function PokemonList() {
  return (
     <div className="pokemon-list">
       {selectedPokemon ? (
-        <PokemonDetails pokemon={selectedPokemon} />
+        <PokemonDetails pokemon={selectedPokemon} onClose={() => setSelectedPokemon(null)}/>
       ) : (
         pokemons.map(pokemon => (
           <PokemonCard 
